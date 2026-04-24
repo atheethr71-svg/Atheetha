@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Room": {
+      "title": "Room",
+      "description": "A campus room or facility location.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Name of the room" },
+        "lat": { "type": "number", "description": "Latitude coordinate" },
+        "lng": { "type": "number", "description": "Longitude coordinate" },
+        "floor": { "type": "number", "description": "Floor level (0 for Ground)" }
+      },
+      "required": ["name", "lat", "lng", "floor"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "rooms": {
+      "schema": "Room",
+      "description": "Public list of rooms and facilities on campus."
+    },
+    "users": {
+      "schema": "User",
+      "description": "User specific data."
+    }
+  }
+}

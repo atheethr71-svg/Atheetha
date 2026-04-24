@@ -1,0 +1,6 @@
+{
+  "name": "SaIT Navigator",
+  "description": "A campus navigation app with AI chat and voice commands for SaIT.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
